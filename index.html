@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <!-- 1.örnek JS eventler ile çalışma html elemente event bağlama -->
+  <!-- js son kullanıcın yaptığı eylemleri yakalayıp bir olay çalıştırmak için kullanılır. -->
+  <button onclick="ButonTiklandiginda()">Butona Tıkla</button>
+  <button onmouseover="ButonUstuneGelindiginde()">Buton Üstüne Gel</button>
+  <button onmouseout="ButonUstundenCikti()">Buton Üstünden Çık</button>
+  <p id="ahmet">
+    <!-- label alanı -->
+  </p>
+  <script>
+    function ButonUstundenCikti() {
+      const element = document.getElementById("ahmet");
+      element.innerText = 'Üstünden çıktı';
+    }
+    function ButonUstuneGelindiginde() {
+      const element = document.getElementById("ahmet"); // elementi id göre yakala
+      element.innerText = 'Üstüne gelindi'; // içindeki yazıyı değiştir. labelText değğeri
+      element.style.backgroundColor = 'red'; // elementi css özelliği arkaplanı değiştir.
+      element.style.color = 'white'; // elementi rengini değiştir.
+    }
+    function ButonTiklandiginda() {
+      alert('butona tıklandı'); // messageBox.show();
+    }
+    // inline JS comment yazma
+    // style link özelliği gibi bir js kodu html olarak referans verilebiliyor.
+    // script kodları üzerine yazılır. JS kodları body'nin en aşasında yer alıyor
+    /*
+      Çoklu satır JS Comment
+    */
+  </script>
+  <!-- html comment -->
+  <!-- external js dosyası çağırma işlemi -->
+  <!-- <script src="lessons/variables.js"></script> -->
+  <!-- <script src="lessons/arrays.js"></script> -->
+  <!-- <script src="lessons/dates.js"></script> -->
+  <!-- <script src="lessons/functions.js"></script> -->
+  <!-- <script src="lessons/objects.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- + butonuna basınca değer 1 artsın. 10 dan büyük olunca mesaj versin -->
+  <!-- - button basınca değer 1 azalsın değer 0 dan küçük olamaz -->
+
+  <label id="sayac">0</label>
+  <button onclick="artir()"> + </button>
+  <button onclick="eksilt()"> - </button>
+
+  <script>
+    let sayac = 0;
+    let label = document.getElementById("sayac"); // element seçim işlemi
+
+    function artir() {
+      debugger;
+
+      if (sayac < 10) {
+        sayac++;
+      } else {
+        alert('sayac 10 değerinden büyük olamaz');
+      }
+
+      label.innerText = sayac.toString(); // sayac değerini label Text yaz
+    }
+
+    function eksilt() {
+      debugger;
+      sayac--;
+      if (sayac < 0) {
+        alert('sayac 0 dan küçük olamaz');
+        sayac = 0;
+      }
+      label.innerText = sayac.toString(); // sayac değerini label Text yaz
+    }
+
+  </script>
+</body>
+
+</html>
